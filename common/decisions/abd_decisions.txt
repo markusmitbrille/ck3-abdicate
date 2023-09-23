@@ -1,0 +1,83 @@
+﻿# Abdicate decision
+abd_abdicate = {
+	desc = abd_abdicate_desc
+	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+
+    major = no
+
+	is_shown = {
+        exists = player_heir
+        player_heir = {
+			age >= 18
+            is_close_family_of = prev
+        }
+	}
+
+	is_valid = {
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	effect = {
+		# opinon impact on old ruler
+		every_vassal = {
+			limit = {
+				# likes you enough to want you to stay
+				opinion = {
+					target = root
+					value >= medium_negative_opinion
+				}
+				NOR = {
+					# relations who either support you or are glad to see you go
+					has_relation_rival = root
+					has_relation_friend = root
+					has_relation_lover = root
+
+					# ambitious are okay with a change of leader
+					has_trait = ambitious
+				}
+			}
+			custom = stress_threshold.3411.l.list
+			add_opinion = {
+				modifier = stress_abdicated_opinion
+				opinion = -40
+				target = root
+			}
+		}
+
+		# turn all weak claims on your titles into strong claims.
+		custom_tooltip = stress_threshold.3411.l.tt
+		hidden_effect = {
+			every_held_title = {
+				save_temporary_scope_as = abdicator_title
+				every_claimant = {
+					limit = { has_weak_claim_on = scope:abdicator_title }
+					make_claim_strong = scope:abdicator_title
+				}
+			}
+		}
+
+		# abdicate
+		depose = yes
+	}
+
+	cost = {
+		prestige = {
+			value = massive_prestige_value
+		}
+	}
+
+	ai_check_interval = 0
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
