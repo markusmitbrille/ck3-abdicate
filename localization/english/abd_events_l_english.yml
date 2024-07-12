@@ -9,7 +9,7 @@
  abd.0001.b: "Maybe another day."
 
  abd.0002.t: "Fit To Rule"
- abd.0002.desc: "It seems this old wolf still has teeth. Even after all I've taught [ROOT.Char.GetPlayerHeir.GetHerHim], my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] wasn't able to beat me in combat. Word is already spreader that [ROOT.Char.GetPlayerHeir.GetSheHe] is not worthy of the family name, much less the right to rule in my stead — neither now, nor ever."
+ abd.0002.desc: "It seems this old wolf still has teeth. Even after all I've taught [ROOT.Char.GetPlayerHeir.GetHerHim], my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] wasn't able to beat me in combat. While [ROOT.Char.GetPlayerHeir.GetSheHe] is licking [ROOT.Char.GetPlayerHeir.GetHerHis] wounds, word is already spreading that [ROOT.Char.GetPlayerHeir.GetTitledFirstName] is not worthy of the family name, much less the right to rule our lands — neither now, nor ever."
  abd.0002.ok: "Unfortunate."
 
  abd.0003.t: "Fit To Rule"
@@ -17,11 +17,11 @@
  abd.0003.ok: "The [ROOT.Char.GetTitleAsNameNoTooltip] is alive, long live the [ROOT.Char.GetTitleAsNameNoTooltip]!"
 
  abd.0004.t: "Corule"
- abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. While it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], so I could lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
+ abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow.\n\nWhile it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], so I could lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
  abd.0004.a: "I have made my decision."
  abd.0004.b: "Maybe another day."
 
  abd.0005.t: "Exile"
- abd.0005.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. I see no other way than to leave [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] and retire to the road."
+ abd.0005.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow.\n\nI see no other way than to leave [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] and retire to the road. While I depart to journey the world, [ROOT.Char.GetPlayerHeir.GetTitledFirstName] will remain here and rule."
  abd.0005.a: "I have made my decision."
  abd.0005.b: "Maybe another day."
