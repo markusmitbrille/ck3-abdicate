@@ -149,15 +149,9 @@ abd.0004 = {
 	# commit
 	option = {
 		name = abd.0004.a
-		
-		depose = yes
-		
-		# set diarch
-		# doesn't work
-		player_heir = {
-			set_diarch = root
-			set_diarchy_type = regency
-		}
+				
+		set_diarch = root.player_heir
+		set_diarchy_type = regency
 	}
 
 	# cancel
