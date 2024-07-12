@@ -17,13 +17,9 @@
  abd.0003.ok: "The [ROOT.Char.GetTitleAsNameNoTooltip] is alive, long live the [ROOT.Char.GetTitleAsNameNoTooltip]!"
 
  abd.0004.t: "Corule"
- abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. While it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
+ abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. While it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], so I could lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
  abd.0004.a: "I have made my decision."
  abd.0004.b: "Maybe another day."
-
- abd.0006.t: "Corule"
- abd.0006.desc: "In a grand ceremony, my [ROOT.Char.GetPlayerHeir.Custom2('RelationToMe', ROOT.Char)] has made me [THIS.Char.GetTitleAsNameNoTooltip]. To rule beside [ROOT.Char.GetHerHim] is an overwhelming honor, but I will rise to the task and become worthy of my new title!"
- abd.0006.ok: "My reign beings today!"
 
  abd.0005.t: "Exile"
  abd.0005.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. I see no other way than to leave [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] and retire to the road."
