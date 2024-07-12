@@ -1,0 +1,31 @@
+﻿l_english:
+ abd.0001.t: "Fit To Rule"
+ abd.0001.desc: "I look upon the crowd gathered in my throne room, chief among them my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)], [ROOT.Char.GetPlayerHeir.GetTitledFirstName]. Should I choose to go through with this, we will fight until second blood, [ROOT.Char.GetWomanMan] against [ROOT.Char.GetPlayerHeir.GetWomanMan], until no further doubt remains who is most fit to rule."
+ abd.0001.a: "Bark the challenge."
+ abd.0001.a.win: "You win the duel"
+ abd.0001.a.win.tt: "[THIS.Char.GetPlayerHeir.GetTitledFirstNameNoTooltip] is disinherited."
+ abd.0001.a.lose: "You lose the duel"
+ abd.0001.a.lose.tt: "[THIS.Char.GetPlayerHeir.GetTitledFirstNameNoTooltip] succeeds you."
+ abd.0001.b: "Maybe another day."
+
+ abd.0002.t: "Fit To Rule"
+ abd.0002.desc: "It seems this old wolf still has teeth. Even after all I've taught [ROOT.Char.GetPlayerHeir.GetHerHim], my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] wasn't able to beat me in combat. Word is already spreader that [ROOT.Char.GetPlayerHeir.GetSheHe] is not worthy of the family name, much less the right to rule in my stead — neither now, nor ever."
+ abd.0002.ok: "Unfortunate."
+
+ abd.0003.t: "Fit To Rule"
+ abd.0003.desc: "Bested by my own [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)], I sink to my knees. In a horrible moment of uncertainty, [ROOT.Char.GetPlayerHeir.GetFirstName] looms over me — one strike is all it would take to claim [ROOT.Char.GetPlayerHeir.GetHerHis] inheritance without any loose ends. Instead [ROOT.Char.GetPlayerHeir.GetSheHe] offers me [ROOT.Char.GetPlayerHeir.GetHerHis] hand and helps me up."
+ abd.0003.ok: "The [ROOT.Char.GetTitleAsNameNoTooltip] is alive, long live the [ROOT.Char.GetTitleAsNameNoTooltip]!"
+
+ abd.0004.t: "Corule"
+ abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. While it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
+ abd.0004.a: "I have made my decision."
+ abd.0004.b: "Maybe another day."
+
+ abd.0006.t: "Corule"
+ abd.0006.desc: "In a grand ceremony, my [ROOT.Char.GetPlayerHeir.Custom2('RelationToMe', ROOT.Char)] has made me [THIS.Char.GetTitleAsNameNoTooltip]. To rule beside [ROOT.Char.GetHerHim] is an overwhelming honor, but I will rise to the task and become worthy of my new title!"
+ abd.0006.ok: "My reign beings today!"
+
+ abd.0005.t: "Exile"
+ abd.0005.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow. I see no other way than to leave [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTierNoTooltip] and retire to the road."
+ abd.0005.a: "I have made my decision."
+ abd.0005.b: "Maybe another day."

@@ -22,47 +22,63 @@ abd_abdicate = {
 		is_at_war = no
 	}
 
+	widget = {
+		gui = decision_view_widget_generic_multichoice_with_effects
+		controller = decision_option_list_controller
+		decision_to_second_step_button = abd_abdicate_choose_method	
+		#show_from_start = yes
+		
+		# duel
+		item = {
+			value = abd_abdicate_choose_duel
+			
+			current_description = abd_abdicate_choose_duel_desc
+			localization = abd_abdicate_choose_duel_name
+			icon = "gfx/interface/icons/icon_prowess.dds"
+
+			is_valid = {
+				government_has_flag = government_is_tribal
+			}
+		}
+
+		# corule
+		item = {
+			value = abd_abdicate_choose_corule
+			
+			current_description = abd_abdicate_choose_corule_desc
+			localization = abd_abdicate_choose_corule_name
+			icon = "gfx/interface/icons/message_feed/law.dds"
+
+			is_valid = {
+				NOT = { government_has_flag = government_is_tribal }
+			}
+		}
+		
+		# exile
+		item = {
+			value = abd_abdicate_choose_exile
+			
+			current_description = abd_abdicate_choose_exile_desc
+			localization = abd_abdicate_choose_exile_name
+			icon = "gfx/interface/icons/message_feed/money.dds"
+		}
+	}
+
 	effect = {
-		# opinon impact on old ruler
-		every_vassal = {
-			limit = {
-				# likes you enough to want you to stay
-				opinion = {
-					target = root
-					value >= medium_negative_opinion
-				}
-				NOR = {
-					# relations who either support you or are glad to see you go
-					has_relation_rival = root
-					has_relation_friend = root
-					has_relation_lover = root
+		custom_tooltip = abd_abdicate_tooltip
 
-					# ambitious are okay with a change of leader
-					has_trait = ambitious
-				}
-			}
-			custom = stress_threshold.3411.l.list
-			add_opinion = {
-				modifier = stress_abdicated_opinion
-				opinion = -40
-				target = root
-			}
+		if = {
+			limit = { scope:abd_abdicate_choose_duel = yes }
+			trigger_event = abd.0001
 		}
-
-		# turn all weak claims on your titles into strong claims.
-		custom_tooltip = stress_threshold.3411.l.tt
-		hidden_effect = {
-			every_held_title = {
-				save_temporary_scope_as = abdicator_title
-				every_claimant = {
-					limit = { has_weak_claim_on = scope:abdicator_title }
-					make_claim_strong = scope:abdicator_title
-				}
-			}
+		if = {
+			limit = { scope:abd_abdicate_choose_corule = yes }
+			trigger_event = abd.0004
 		}
-
-		# abdicate
-		depose = yes
+		if = {
+			limit = { scope:abd_abdicate_choose_exile = yes }
+			trigger_event = abd.0005
+		}
 	}
 
 	cost = {
