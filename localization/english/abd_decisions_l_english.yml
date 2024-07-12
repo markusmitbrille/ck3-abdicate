@@ -1,7 +1,8 @@
 ﻿l_english:
  abd_abdicate: "Abdicate"
  abd_abdicate_desc: "As of late, I have come to question many things: Have I lived life to the fullest? Was it really I who governed the realm, or has the realm, in truth, governed me? Though it would be quite unusual, I could hand over the reigns to my heir, [ROOT.Char.GetPlayerHeir.GetTitledFirstName], and indulge in my passions while [ROOT.Char.GetPlayerHeir.GetSheHe] oversees the administration of our family's holdings ..."
- abd_abdicate_tooltip: "Play as [THIS.Char.GetPlayerHeir.GetTitledFirstName]"
+ abd_abdicate_tooltip: "Play as [ROOT.Char.GetPlayerHeir.GetTitledFirstName]"
+ abd_abdicate_effect: "Play as [THIS.Char.GetPlayerHeir.GetTitledFirstName]"
  abd_abdicate_confirm: "$abd_abdicate$"
  abd_abdicate_choose_method: "The Wheel Turns"
 

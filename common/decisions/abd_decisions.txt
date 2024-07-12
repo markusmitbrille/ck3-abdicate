@@ -7,19 +7,26 @@ abd_abdicate = {
 
 	is_shown = {
         exists = player_heir
-        player_heir = {
-			age >= 18
-            is_close_family_of = prev
-        }
 	}
 
 	is_valid = {
+		player_heir = {
+			is_adult = yes
+			is_courtier_of = root
+			is_close_family_of = root
+        }
 	}
 
 	is_valid_showing_failures_only = {
-		is_imprisoned = no
 		is_available_adult = yes
+		is_imprisoned = no
 		is_at_war = no
+
+		player_heir = {
+			is_available_adult = yes
+			is_imprisoned = no
+			is_at_war = no
+        }
 	}
 
 	widget = {
@@ -50,7 +57,12 @@ abd_abdicate = {
 			icon = "gfx/interface/icons/message_feed/law.dds"
 
 			is_valid = {
-				NOT = { government_has_flag = government_is_tribal }
+				# heir must already be a playable character
+				player_heir = {
+					is_ruler = yes
+					is_landed = yes
+					highest_held_title_tier > tier_barony
+				}
 			}
 		}
 		
@@ -65,7 +77,7 @@ abd_abdicate = {
 	}
 
 	effect = {
-		custom_tooltip = abd_abdicate_tooltip
+		custom_tooltip = abd_abdicate_effect
 
 		if = {
 			limit = { scope:abd_abdicate_choose_duel = yes }

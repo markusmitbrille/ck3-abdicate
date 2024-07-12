@@ -150,8 +150,11 @@ abd.0004 = {
 	option = {
 		name = abd.0004.a
 				
+		start_diarchy = regency
 		set_diarch = root.player_heir
-		set_diarchy_type = regency
+		set_diarchy_swing = 80
+
+		set_player_character = root.player_heir
 	}
 
 	# cancel
