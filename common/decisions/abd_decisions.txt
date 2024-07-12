@@ -12,8 +12,11 @@ abd_abdicate = {
 	is_valid = {
 		player_heir = {
 			is_adult = yes
-			is_courtier_of = root
 			is_close_family_of = root
+			OR = {
+				is_vassal_of = root
+				is_courtier_of = root
+			}
         }
 	}
 
