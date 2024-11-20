@@ -1,114 +1,114 @@
 ﻿# Abdicate decision
 abd_abdicate = {
-	desc = abd_abdicate_desc
-	picture = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds"
+    desc = abd_abdicate_desc
+    picture = { reference = "gfx/interface/illustrations/decisions/decision_destiny_goal.dds" }
 
     major = no
 
-	is_shown = {
+    is_shown = {
         exists = player_heir
-	}
+    }
 
-	is_valid = {
-		player_heir = {
-			is_adult = yes
-			is_close_family_of = root
-			OR = {
-				is_vassal_of = root
-				is_courtier_of = root
-			}
+    is_valid = {
+        player_heir = {
+            is_adult = yes
+            is_close_family_of = root
+            OR = {
+                is_vassal_of = root
+                is_courtier_of = root
+            }
         }
-	}
+    }
 
-	is_valid_showing_failures_only = {
-		is_available_adult = yes
-		is_imprisoned = no
-		is_at_war = no
+    is_valid_showing_failures_only = {
+        is_available_adult = yes
+        is_imprisoned = no
+        is_at_war = no
 
-		player_heir = {
-			is_available_adult = yes
-			is_imprisoned = no
-			is_at_war = no
+        player_heir = {
+            is_available_adult = yes
+            is_imprisoned = no
+            is_at_war = no
         }
-	}
+    }
 
-	widget = {
-		gui = decision_view_widget_generic_multichoice_with_effects
-		controller = decision_option_list_controller
-		decision_to_second_step_button = abd_abdicate_choose_method	
-		#show_from_start = yes
-		
-		# duel
-		item = {
-			value = abd_abdicate_choose_duel
-			
-			current_description = abd_abdicate_choose_duel_desc
-			localization = abd_abdicate_choose_duel_name
-			icon = "gfx/interface/icons/icon_prowess.dds"
+    widget = {
+        gui = decision_view_widget_generic_multichoice_with_effects
+        controller = decision_option_list_controller
+        decision_to_second_step_button = abd_abdicate_choose_method
+        #show_from_start = yes
 
-			is_valid = {
-				government_has_flag = government_is_tribal
-			}
-		}
+        # duel
+        item = {
+            value = abd_abdicate_choose_duel
 
-		# corule
-		item = {
-			value = abd_abdicate_choose_corule
-			
-			current_description = abd_abdicate_choose_corule_desc
-			localization = abd_abdicate_choose_corule_name
-			icon = "gfx/interface/icons/message_feed/law.dds"
+            current_description = abd_abdicate_choose_duel_desc
+            localization = abd_abdicate_choose_duel_name
+            icon = "gfx/interface/icons/icon_prowess.dds"
 
-			is_valid = {
-				# heir must already be a playable character
-				player_heir = {
-					is_ruler = yes
-					is_landed = yes
-					highest_held_title_tier > tier_barony
-				}
-			}
-		}
-		
-		# exile
-		item = {
-			value = abd_abdicate_choose_exile
-			
-			current_description = abd_abdicate_choose_exile_desc
-			localization = abd_abdicate_choose_exile_name
-			icon = "gfx/interface/icons/message_feed/money.dds"
-		}
-	}
+            is_valid = {
+                government_has_flag = government_is_tribal
+            }
+        }
 
-	effect = {
-		custom_tooltip = abd_abdicate_effect
+        # corule
+        item = {
+            value = abd_abdicate_choose_corule
 
-		if = {
-			limit = { scope:abd_abdicate_choose_duel = yes }
-			trigger_event = abd.0001
-		}
-		if = {
-			limit = { scope:abd_abdicate_choose_corule = yes }
-			trigger_event = abd.0004
-		}
-		if = {
-			limit = { scope:abd_abdicate_choose_exile = yes }
-			trigger_event = abd.0005
-		}
-	}
+            current_description = abd_abdicate_choose_corule_desc
+            localization = abd_abdicate_choose_corule_name
+            icon = "gfx/interface/icons/message_feed/law.dds"
 
-	cost = {
-		prestige = {
-			value = massive_prestige_value
-		}
-	}
+            is_valid = {
+                # heir must already be a playable character
+                player_heir = {
+                    is_ruler = yes
+                    is_landed = yes
+                    highest_held_title_tier > tier_barony
+                }
+            }
+        }
 
-	ai_check_interval = 0
+        # exile
+        item = {
+            value = abd_abdicate_choose_exile
 
-	ai_potential = {
-		always = no
-	}
+            current_description = abd_abdicate_choose_exile_desc
+            localization = abd_abdicate_choose_exile_name
+            icon = "gfx/interface/icons/message_feed/money.dds"
+        }
+    }
 
-	ai_will_do = {
-		base = 0
-	}
+    effect = {
+        custom_tooltip = abd_abdicate_effect
+
+        if = {
+            limit = { scope:abd_abdicate_choose_duel = yes }
+            trigger_event = abd.0001
+        }
+        if = {
+            limit = { scope:abd_abdicate_choose_corule = yes }
+            trigger_event = abd.0004
+        }
+        if = {
+            limit = { scope:abd_abdicate_choose_exile = yes }
+            trigger_event = abd.0005
+        }
+    }
+
+    cost = {
+        prestige = {
+            value = massive_prestige_value
+        }
+    }
+
+    ai_check_interval = 0
+
+    ai_potential = {
+        always = no
+    }
+
+    ai_will_do = {
+        base = 0
+    }
 }
