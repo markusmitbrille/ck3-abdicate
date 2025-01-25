@@ -16,8 +16,8 @@
  abd.0003.desc: "Bested by my own [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)], I sink to my knees. In a horrible moment of uncertainty, [ROOT.Char.GetPlayerHeir.GetFirstName] looms over me — one strike is all it would take to claim [ROOT.Char.GetPlayerHeir.GetHerHis] inheritance without any loose ends. Instead [ROOT.Char.GetPlayerHeir.GetSheHe] offers me [ROOT.Char.GetPlayerHeir.GetHerHis] hand and helps me up."
  abd.0003.ok: "The [ROOT.Char.GetTitleAsNameNoTooltip] is alive, long live the [ROOT.Char.GetTitleAsNameNoTooltip]!"
 
- abd.0004.t: "Corule"
- abd.0004.desc: "If I were to remain at court, my [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] could never rule without [ROOT.Char.GetPlayerHeir.GetHerHis] every word being weighed, [ROOT.Char.GetPlayerHeir.GetHerHis] reign in my shadow.\n\nWhile it isn't customary, there is historical precedent for corule. Maybe it would be best to elevate [ROOT.Char.GetPlayerHeir.GetHerHim] and reign together as [ROOT.Char.GetTitleAsNameNoTooltip] and Co-[ROOT.Char.GetTitleAsNameNoTooltip], so I could lean back while [ROOT.Char.GetPlayerHeir.GetSheHe] tends to everyday business."
+ abd.0004.t: "Retire"
+ abd.0004.desc: "My [ROOT.Char.Custom2('RelationToMe', ROOT.Char.GetPlayerHeir)] has been ruling by my side for a long time. While it isn't customary, it would not disrupt the government of the realm, if I were to retire from active rule. [ROOT.Char.GetPlayerHeir.GetHeShe] would simply assume full control, while I remain at court to provide guidance and moral support."
  abd.0004.a: "I have made my decision."
  abd.0004.b: "Maybe another day."
 

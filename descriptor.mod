@@ -6,5 +6,5 @@ tags = {
 }
 name = "Abdicate"
 picture = "thumbnail.png"
-supported_version = "1.12.*"
+supported_version = "1.14.*"
 path = "mod/ck3-abdicate"

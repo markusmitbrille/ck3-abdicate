@@ -60,12 +60,10 @@ abd_abdicate = {
             icon = "gfx/interface/icons/message_feed/law.dds"
 
             is_valid = {
-                # heir must already be a playable character
-                player_heir = {
-                    is_ruler = yes
-                    is_landed = yes
-                    highest_held_title_tier > tier_barony
-                }
+                has_active_diarchy = yes
+                diarch = player_heir
+
+                years_as_diarch >= 4
             }
         }
 

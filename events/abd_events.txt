@@ -2,239 +2,236 @@
 
 # duel
 abd.0001 = {
-	type = character_event
-	title = abd.0001.t
-	desc = abd.0001.desc
+    type = character_event
+    title = abd.0001.t
+    desc = abd.0001.desc
 
-	theme = crown
+    theme = crown
 
-	left_portrait = {
-		character = root
-		scripted_animation = duel_wield_weapon
-	}
+    left_portrait = {
+        character = root
+        scripted_animation = duel_wield_weapon
+    }
 
-	right_portrait = {
-		character = root.player_heir
-		scripted_animation = duel_wield_weapon
-	}
+    right_portrait = {
+        character = root.player_heir
+        scripted_animation = duel_wield_weapon
+    }
 
-	override_background = { reference = throne_room }
+    override_background = { reference = throne_room }
 
-	# commit
-	option = {
-		name = abd.0001.a
+    # commit
+    option = {
+        name = abd.0001.a
 
-		duel = {
-			skill = prowess
-			target = root.player_heir
+        duel = {
+            skill = prowess
+            target = root.player_heir
 
-			# win
-			50 = {
-				desc = abd.0001.a.win
-				custom_tooltip = abd.0001.a.win.tt
+            # win
+            50 = {
+                desc = abd.0001.a.win
+                custom_tooltip = abd.0001.a.win.tt
 
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = 1.5
-				}
+                compare_modifier = {
+                    value = scope:duel_value
+                    multiplier = 1.5
+                }
 
-				max = 95
+                max = 95
 
-				trigger_event = abd.0002
-			}
+                trigger_event = abd.0002
+            }
 
-			# lose
-			50 = {
-				desc = abd.0001.a.lose
-				custom_tooltip = abd.0001.a.lose.tt
+            # lose
+            50 = {
+                desc = abd.0001.a.lose
+                custom_tooltip = abd.0001.a.lose.tt
 
-				compare_modifier = {
-					value = scope:duel_value
-					multiplier = -1.5
-				}
+                compare_modifier = {
+                    value = scope:duel_value
+                    multiplier = -1.5
+                }
 
-				min = 5
+                min = 5
 
-				trigger_event = abd.0003
-			}
-		}
-	}
+                trigger_event = abd.0003
+            }
+        }
+    }
 
-	# cancel
-	option = {
-		name = abd.0001.b
-	}
+    # cancel
+    option = {
+        name = abd.0001.b
+    }
 }
 
 # duel (won)
 abd.0002 = {
-	type = character_event
-	title = abd.0002.t
-	desc = abd.0002.desc
+    type = character_event
+    title = abd.0002.t
+    desc = abd.0002.desc
 
-	theme = crown
+    theme = crown
 
-	left_portrait = {
-		character = root
-		scripted_animation = duel_celebrate
-	}
+    left_portrait = {
+        character = root
+        scripted_animation = duel_celebrate
+    }
 
-	right_portrait = {
-		character = root.player_heir
-		animation = dismay
-	}
+    right_portrait = {
+        character = root.player_heir
+        animation = dismay
+    }
 
-	override_background = { reference = throne_room }
+    override_background = { reference = throne_room }
 
-	immediate = {
-		root.player_heir = { increase_wounds_no_death_effect = { REASON = fight } }
-	}
+    immediate = {
+        root.player_heir = { increase_wounds_no_death_effect = { REASON = fight } }
+    }
 
-	option = {
-		name = abd.0002.ok
-		root.player_heir = { add_trait = disinherited }
-	}
+    option = {
+        name = abd.0002.ok
+        root.player_heir = { add_trait = disinherited }
+    }
 }
 
 # duel (lose)
 abd.0003 = {
-	type = character_event
-	title = abd.0003.t
-	desc = abd.0003.desc
+    type = character_event
+    title = abd.0003.t
+    desc = abd.0003.desc
 
-	theme = crown
+    theme = crown
 
-	left_portrait = {
-		character = root
-		animation = admiration
-	}
+    left_portrait = {
+        character = root
+        animation = admiration
+    }
 
-	right_portrait = {
-		character = root.player_heir
-		scripted_animation = duel_celebrate
-	}
+    right_portrait = {
+        character = root.player_heir
+        scripted_animation = duel_celebrate
+    }
 
-	override_background = { reference = throne_room }
+    override_background = { reference = throne_room }
 
-	immediate = {
-		root = { increase_wounds_no_death_effect = { REASON = fight } }
-	}
+    immediate = {
+        root = { increase_wounds_no_death_effect = { REASON = fight } }
+    }
 
-	option = {
-		name = abd.0003.ok
-		depose = yes
-	}
+    option = {
+        name = abd.0003.ok
+        depose = yes
+    }
 }
 
 # corule
 abd.0004 = {
-	type = character_event
-	title = abd.0004.t
-	desc = abd.0004.desc
+    type = character_event
+    title = abd.0004.t
+    desc = abd.0004.desc
 
-	theme = crown
+    theme = crown
 
-	left_portrait = {
-		character = root
-		animation = scheme
-	}
+    left_portrait = {
+        character = root
+        animation = scheme
+    }
 
-	right_portrait = {
-		character = root.player_heir
-		animation = marshal
-	}
+    right_portrait = {
+        character = root.player_heir
+        animation = marshal
+    }
 
-	override_background = { reference = throne_room }
+    override_background = { reference = throne_room }
 
-	# commit
-	option = {
-		name = abd.0004.a
-				
-		start_diarchy = regency
-		set_diarch = root.player_heir
-		set_diarchy_swing = 80
+    # commit
+    option = {
+        name = abd.0004.a
 
-		set_player_character = root.player_heir
-	}
+        # abdicate
+        depose = yes
+    }
 
-	# cancel
-	option = {
-		name = abd.0004.b
-	}
+    # cancel
+    option = {
+        name = abd.0004.b
+    }
 }
 
 # exile
 abd.0005 = {
-	type = character_event
-	title = abd.0005.t
-	desc = abd.0005.desc
+    type = character_event
+    title = abd.0005.t
+    desc = abd.0005.desc
 
-	theme = crown
+    theme = crown
 
-	left_portrait = {
-		character = root
-		animation = scheme
-	}
+    left_portrait = {
+        character = root
+        animation = scheme
+    }
 
-	right_portrait = {
-		character = root.player_heir
-		animation = marshal
-	}
+    right_portrait = {
+        character = root.player_heir
+        animation = marshal
+    }
 
-	override_background = { reference = throne_room }
+    override_background = { reference = throne_room }
 
-	# commit
-	option = {
-		name = abd.0005.a
+    # commit
+    option = {
+        name = abd.0005.a
 
-		# opinon impact on old ruler
-		every_vassal = {
-			limit = {
-				# likes you enough to want you to stay
-				opinion = {
-					target = root
-					value >= medium_negative_opinion
-				}
-				NOR = {
-					# relations who either support you or are glad to see you go
-					has_relation_rival = root
-					has_relation_friend = root
-					has_relation_lover = root
+        # opinon impact on old ruler
+        every_vassal = {
+            limit = {
+                # likes you enough to want you to stay
+                opinion = {
+                    target = root
+                    value >= medium_negative_opinion
+                }
+                NOR = {
+                    # relations who either support you or are glad to see you go
+                    has_relation_rival = root
+                    has_relation_friend = root
+                    has_relation_lover = root
 
-					# ambitious are okay with a change of leader
-					has_trait = ambitious
-				}
-			}
-			custom = stress_threshold.3411.l.list
-			add_opinion = {
-				modifier = stress_abdicated_opinion
-				opinion = -40
-				target = root
-			}
-		}
+                    # ambitious are okay with a change of leader
+                    has_trait = ambitious
+                }
+            }
+            custom = stress_threshold.3411.l.list
+            add_opinion = {
+                modifier = stress_abdicated_opinion
+                opinion = -40
+                target = root
+            }
+        }
 
-		# turn all weak claims on your titles into strong claims.
-		custom_tooltip = stress_threshold.3411.l.tt
-		hidden_effect = {
-			every_held_title = {
-				save_temporary_scope_as = abdicator_title
-				every_claimant = {
-					limit = { has_weak_claim_on = scope:abdicator_title }
-					make_claim_strong = scope:abdicator_title
-				}
-			}
-		}
+        # turn all weak claims on your titles into strong claims.
+        custom_tooltip = stress_threshold.3411.l.tt
+        hidden_effect = {
+            every_held_title = {
+                save_temporary_scope_as = abdicator_title
+                every_claimant = {
+                    limit = { has_weak_claim_on = scope:abdicator_title }
+                    make_claim_strong = scope:abdicator_title
+                }
+            }
+        }
 
-		save_temporary_scope_as = abdicator
+        save_temporary_scope_as = abdicator
 
-		# abdicate
-		depose = yes
-		banish = yes
-	}
+        # abdicate
+        depose = yes
+        banish = yes
+    }
 
-	# cancel
-	option = {
-		name = abd.0005.b
-	}
+    # cancel
+    option = {
+        name = abd.0005.b
+    }
 }
 
