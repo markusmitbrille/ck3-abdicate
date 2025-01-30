@@ -63,7 +63,9 @@ abd_abdicate = {
                 has_active_diarchy = yes
                 diarch = player_heir
 
-                years_as_diarch >= 4
+                player_heir = {
+                    years_as_diarch >= 4
+                }
             }
         }
 
